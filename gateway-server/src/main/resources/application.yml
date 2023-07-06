@@ -1,0 +1,19 @@
+server:
+  port: 7777
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          filters:
+            - StripPrefix=0
+      routes:
+        - id: cloud-auth
+          uri: http://127.0.0.1:7001
+          predicates:
+            - Path=/auth/**
+        - id: message-app
+          uri: http://127.0.0.1:7003
+          predicates:
+            - Path=/message/**

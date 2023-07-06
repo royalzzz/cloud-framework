@@ -1,0 +1,19 @@
+server:
+  port: 7003
+
+#logging:
+#  level:
+#    root: INFO
+#    org.springframework.web: INFO
+#    org.springframework.security: TRACE
+#    org.springframework.security.oauth2: TRACE
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://127.0.0.1:7001
