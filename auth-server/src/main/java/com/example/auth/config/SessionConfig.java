@@ -10,7 +10,7 @@ import org.springframework.security.web.session.HttpSessionEventPublisher;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisIndexedHttpSession;
 
 @Configuration
-@EnableRedisIndexedHttpSession(maxInactiveIntervalInSeconds = 7 * 24 * 60 * 60, redisNamespace = "auth:goodscattle")
+@EnableRedisIndexedHttpSession(maxInactiveIntervalInSeconds = 7 * 24 * 60 * 60, redisNamespace = "auth:test")
 public class SessionConfig {
 
     @Autowired

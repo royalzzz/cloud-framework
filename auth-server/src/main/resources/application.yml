@@ -1,5 +1,7 @@
 server:
   port: 7001
+  servlet:
+    context-path: /auth
 spring:
   session:
     store-type: redis
